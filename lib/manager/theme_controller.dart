@@ -8,6 +8,11 @@ class ThemeController extends GetxController{
 
   final isDark = false.obs;
 
+  ThemeController(){
+    final result = _loadTheme();
+    isDark(result);
+  }
+
   // theme保存在GetStorage
   final _box = GetStorage();
   final _key = "isDarkMode";

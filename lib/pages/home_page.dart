@@ -16,14 +16,16 @@ class HomePage extends StatelessWidget {
         actions: [
           Obx(() => IconButton(
               onPressed: () {
-                if (Get.isDarkMode) {
+                if (themeController.isDark.value) {
                   themeController.saveTheme(false);
                   themeController.changeTheme(Themes.lightTheme);
+                  themeController.changeThemeMode(ThemeMode.light);
                 } else {
                   themeController.saveTheme(true);
                   themeController.changeTheme(Themes.darkTheme);
+                  themeController.changeThemeMode(ThemeMode.dark);
                 }
-                print(themeController);
+                print(Get.isDarkMode);
               },
               icon: themeController.isDark.value
                   ? const Icon(Icons.dark_mode_outlined)
