@@ -35,10 +35,10 @@ class MyApp extends StatelessWidget {
       initialBinding: StoreBinding(),
       getPages: [
         GetPage(name: "/", page: () => HomePage()),
-        GetPage(name: '/edit_name', page: () => const UpdateStoreName()),
+        GetPage(name: '/edit_name', page: () => UpdateStoreName()),
         // GetPage(name: '/add_followers', page: () => AddFollowers()),
-        GetPage(name: '/toggle_status', page: () => const StoreStatus()),
-        GetPage(name: '/edit_follower_count', page: () => const EditFollowerCount()),
+        GetPage(name: '/toggle_status', page: () => StoreStatus()),
+        GetPage(name: '/edit_follower_count', page: () => EditFollowerCount()),
         // GetPage(name: '/add_reviews', page: () => AddReviews()),
         // GetPage(name: '/update_menu', page: () => const UpdateMenu()),
       ],
